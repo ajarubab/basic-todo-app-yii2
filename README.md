@@ -231,3 +231,17 @@ vendor/bin/codecept run functional,unit --coverage --coverage-html --coverage-xm
 ```
 
 You can see code coverage output under the `tests/_output` directory.
+-------------------------------------------------------------------------------------
+
+1. goto htdoccs
+2. open terminal there
+3. run in terminal : composer create-project --prefer-dist yiisoft/yii2-app-basic mytodo
+4. run in terminal : cd mytodo
+5. run in terminal : code .
+6. run in terminal : php yii serve
+7. goto phpmyadmin and make a database "mytodo"
+8. create a custom user account for db access of "mytodo" and connect it with database "mytodo" having all previledges
+8. create anoyher custom user account for localhost for same name for db access of "mytodo" and connect it with database "mytodo" having all previledges too
+9. insert the database name, newly created user account name , password and hostname : 127.0.0.1
+
+

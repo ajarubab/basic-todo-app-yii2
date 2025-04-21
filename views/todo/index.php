@@ -6,11 +6,10 @@ use yii\widgets\Pjax;  // Add this line
 use app\models\Category;
 
 $this->title = 'To-do List';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="todo-index">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1 style="text-align: center;"><?= Html::encode($this->title) ?></h1>
 
     <div class="todo-form">
         <?php $form = ActiveForm::begin(['id' => 'todo-form']); ?>
@@ -63,7 +62,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'tableOptions' => ['class' => 'table table-striped'],
             'pager' => [
                 'options' => ['class' => 'pagination justify-content-center'],
-            ]
+                'linkContainerOptions' => ['class' => 'page-item'],
+                'linkOptions' => ['class' => 'page-link'],
+                'disabledListItemSubTagOptions' => ['tag' => 'a', 'class' => 'page-link'],
+                'activePageCssClass' => 'active',
+                'prevPageLabel' => '<<',
+                'nextPageLabel' => '>>',
+                'hideOnSinglePage' => false,
+            ],
         ]); ?>
     </div>
     <?php Pjax::end(); // End Pjax wrapper ?>
