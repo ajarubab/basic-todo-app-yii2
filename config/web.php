@@ -1,8 +1,13 @@
 <?php
 
+// Load application parameters and database configuration files
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
+/**
+ * Main application configuration array.
+ * This configures the Yii2 application components, modules, and parameters.
+ */
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
@@ -13,7 +18,7 @@ $config = [
     ],
     'components' => [
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+            // Secret key used for cookie validation to ensure data integrity and security
             'cookieValidationKey' => 'ACgjcIrdofBk1mNGnMq18ez3_xGT4FHA',
         ],
         'cache' => [
@@ -44,7 +49,7 @@ $config = [
         'db' => $db,
         /*
         'urlManager' => [
-            'enablePrettyUrl' => true,
+            'enablePrettyUrl' => true,      // Enables user-friendly URLs (without index.php)
             'showScriptName' => false,
             'rules' => [
             ],

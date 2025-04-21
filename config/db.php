@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Database configurations details to connect with mysql databse mytodo
+ */
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=127.0.0.1;dbname=mytodo',
